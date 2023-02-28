@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+	<link href="http://fonts.cdnfonts.com/css/bignoodletitling" rel="stylesheet">
+	<link href="http://fonts.cdnfonts.com/css/veteran-typewriter" rel="stylesheet">
+	<link href="http://fonts.cdnfonts.com/css/basalt" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="content">
+      <div class="logo">
+        <a href="index.html">History of Tanks</a>
+      </div>
+      <ul class="menu-list">
+        <div class="icon cancel-btn">
+          <i class="fas fa-times"></i>
+        </div>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="hall_of_fame.html">Hall of Fame</a></li>
+        <li><a href="ammo.html">Ammo</a></li>
+        <li><a href="training.html">Training</a></li>
+        <li><a href="people.html">People</a></li>
+		<li><a href="resources.html">Resources</a></li>
+      </ul>
+      <div class="icon menu-btn">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </nav>
+  <div class="banner"><h1>Resources</h1></div>
+  <div class="about">
+    <div class="content">
+      <div class="title">Resources</div>
+		<p>Interesting facts about famout people in WW2 found on: <span style="color: red;">https://www.historynet.com/the-war-list-great-tank-commanders.htm</span></p>
+		<p>Interesting facts about tanks from WW2 found on: <span style="color: red;">https://tanks-encyclopedia.com/</span></p>
+		<p>How to create sticky responsive navigation bar: <span style="color: red;">https://www.youtube.com/watch?v=UHSeFxZIuv8&ab_channel=CodingNepal</span></p>
+    </div>
+  </div>
+
+  <script>
+    const body = document.querySelector("body");
+    const navbar = document.querySelector(".navbar");
+    const menuBtn = document.querySelector(".menu-btn");
+    const cancelBtn = document.querySelector(".cancel-btn");
+    menuBtn.onclick = ()=>{
+      navbar.classList.add("show");
+      menuBtn.classList.add("hide");
+      body.classList.add("disabled");
+    }
+    cancelBtn.onclick = ()=>{
+      body.classList.remove("disabled");
+      navbar.classList.remove("show");
+      menuBtn.classList.remove("hide");
+    }
+    window.onscroll = ()=>{
+      this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+    }
+  </script>
+</body>
+</html>

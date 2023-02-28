@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ammo</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+	<link href="http://fonts.cdnfonts.com/css/bignoodletitling" rel="stylesheet">
+	<link href="http://fonts.cdnfonts.com/css/veteran-typewriter" rel="stylesheet">
+	<link href="http://fonts.cdnfonts.com/css/basalt" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="content">
+      <div class="logo">
+        <a href="index.html">History of Tanks</a>
+      </div>
+      <ul class="menu-list">
+        <div class="icon cancel-btn">
+          <i class="fas fa-times"></i>
+        </div>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="hall_of_fame.html">Hall of Fame</a></li>
+        <li><a href="ammo.html">Ammo</a></li>
+        <li><a href="training.html">Training</a></li>
+        <li><a href="people.html">People</a></li>
+		<li><a href="resources.html">Resources</a></li>
+      </ul>
+      <div class="icon menu-btn">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </nav>
+  <div class="banner"><h1>Ammo</h1></div>
+  <div class="about2">
+    <div class="content2">
+		<div class="wrapper">
+				<h1>Types of Ammo</h1>
+				<p>There were many types of ammunition, but only 4 are important.</p>
+				
+				<p>The first one is <span style="color: orange">AP shell</span>. AP shell or Armor Piercing shell is designed to penetrate body armor or vehicle armor.
+				AP projectiles were mainly used in warships, but after 1920s the shells were used for anti-tank missions. The concept of AP shell was so that the
+				shell would leave the tank at very high muzzle velocity. However, as it slowed down the shell lost it's penetrating power.</p>
+				
+				<p>The second one is <span style="color: orange">APCR shell</span>. APCR shell or Armor Piercing Composite Rigid shells are same as AP shells, but have much higher muzzle velocity.
+				Their penetration power decreseas with range as well.</p>
+				
+				<p>The thrid one is <span style="color: orange">HEAT shell</span>. HEAT or High Explosive Anti-Tank shells penetration power always stays the same. However, the HEAT shell
+				is firend at very low muzzle velocity, and travels much slower than AP or APCR shell.</p>
+				
+				<p>The forth one is <span style="color: orange">HE shell</span>. HE shell or High Explosive shell travels at almost same speed as AP shell. It's penetration power remains same
+				no matter the distance. After the HE shell touches anything, it detonates and it's fragments can damage the vehicle nearby. They have the 
+				highest potentional damage but lowest penetration power.</p>
+				
+			</div>
+    </div>
+  </div>
+
+  <script>
+    const body = document.querySelector("body");
+    const navbar = document.querySelector(".navbar");
+    const menuBtn = document.querySelector(".menu-btn");
+    const cancelBtn = document.querySelector(".cancel-btn");
+    menuBtn.onclick = ()=>{
+      navbar.classList.add("show");
+      menuBtn.classList.add("hide");
+      body.classList.add("disabled");
+    }
+    cancelBtn.onclick = ()=>{
+      body.classList.remove("disabled");
+      navbar.classList.remove("show");
+      menuBtn.classList.remove("hide");
+    }
+    window.onscroll = ()=>{
+      this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+    }
+  </script>
+</body>
+</html>

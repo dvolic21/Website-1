@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Training</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+	<link href="http://fonts.cdnfonts.com/css/bignoodletitling" rel="stylesheet">
+	<link href="http://fonts.cdnfonts.com/css/veteran-typewriter" rel="stylesheet">
+	<link href="http://fonts.cdnfonts.com/css/basalt" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="content">
+      <div class="logo">
+        <a href="index.html">History of Tanks</a>
+      </div>
+      <ul class="menu-list">
+        <div class="icon cancel-btn">
+          <i class="fas fa-times"></i>
+        </div>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="hall_of_fame.html">Hall of Fame</a></li>
+        <li><a href="ammo.html">Ammo</a></li>
+        <li><a href="training.html">Training</a></li>
+        <li><a href="people.html">People</a></li>
+		<li><a href="resources.html">Resources</a></li>
+      </ul>
+      <div class="icon menu-btn">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </nav>
+  <div class="banner"><h1>Training</h1></div>
+  <div class="about2">
+    <div class="content2">
+		<div class="wrapper">
+				<h1>Training</h1>
+				<p>The training in order to become part of tank crew lasted 13 weeks. The training included everything, from how to repair certain parts of tank
+				to how use the tank. In the March 1943 the training length was increased to 14 weeks. However, as war went on and there were less and less people
+				possible to use the tank, the training was shorten to only 6 weeks. And in middle of August 1945 the training was only 2 weeks.</p>
+				
+				<p>Usually the tank had 3-5 crew members.</p>
+				
+				<p>The first and most important crew member was the <span style="color: red">commander</span>. His responsibilty is how the tank is operating on the battlefield. He is responsible
+				for spotting other possible enemy tanks or enemy objects, he is responsible for his crew and for the tank. As it is the hardest role in the tank
+				the training for the commander is hard and long. Commander also must be able to replace any crew member if something were to happen to them.</p>
+				
+				<p>The second important role is the <span style="color: red">driver</span>. The responsibility of the driver is to drive the tank, maintain it and fire it. Observe and judge 
+				the forward terrain and monitor the instruments.</p>
+				
+				<p>The third crew member would be <span style="color: red">gunner</span>. His responsibility is surveillance, he must give driver the order when he is shooting. He must understand
+				the information received from commander.</p>
+				
+				<p>The fourth and fifth crew member were <span style="color: red">loaders</span>. The size of crew was dependant on the size of the tank. Light tanks usually had only 3 members, while
+				heavy tanks or self-propelled guns usually had 5 crew members. As the tank was usually loaded with more types of ammunition, the loaders responsibility
+				was to inform commander on how many types of which ammunition was left. Loaders job was also to listen to information he gets and load the proper ammunition
+				which was said to him by commander.</p>
+    </div>
+  </div>
+ </div>
+
+  <script>
+    const body = document.querySelector("body");
+    const navbar = document.querySelector(".navbar");
+    const menuBtn = document.querySelector(".menu-btn");
+    const cancelBtn = document.querySelector(".cancel-btn");
+    menuBtn.onclick = ()=>{
+      navbar.classList.add("show");
+      menuBtn.classList.add("hide");
+      body.classList.add("disabled");
+    }
+    cancelBtn.onclick = ()=>{
+      body.classList.remove("disabled");
+      navbar.classList.remove("show");
+      menuBtn.classList.remove("hide");
+    }
+    window.onscroll = ()=>{
+      this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Famous People</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+	<link href="http://fonts.cdnfonts.com/css/bignoodletitling" rel="stylesheet">
+	<link href="http://fonts.cdnfonts.com/css/veteran-typewriter" rel="stylesheet">
+	<link href="http://fonts.cdnfonts.com/css/basalt" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="content">
+      <div class="logo">
+        <a href="index.html">History of Tanks</a>
+      </div>
+      <ul class="menu-list">
+        <div class="icon cancel-btn">
+          <i class="fas fa-times"></i>
+        </div>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="hall_of_fame.html">Hall of Fame</a></li>
+        <li><a href="ammo.html">Ammo</a></li>
+        <li><a href="training.html">Training</a></li>
+        <li><a href="people.html">People</a></li>
+		<li><a href="resources.html">Resources</a></li>
+      </ul>
+      <div class="icon menu-btn">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </nav>
+  <div class="banner"><h1>Famous People</h1></div>
+  <div class="about2">
+    <div class="content22">
+		<div class="wrapper3">
+			<h1>Capt. Michael Wittman</h1>
+				<p><span style="color: red; font-family: Basalt, sans-serif;">Led most lethal tank attack.</span> Credited with destroying 138 tanks, 132 antitank guns, and uncounted other vehicles on the Russian front and at Normandy,
+				SS-Hauptsturmführer Wittmann is best known for his rampage against the British 7th Armored Division outside Villers-Bocage in
+				June 1944, devastating as many as 14 tanks, 2 antitank guns, and 15 other vehicles in 15 minutes. He was finally cornered and
+				killed in his Tiger I tank by five British or Canadian Shermans on August 8, 1944.</p>
+				<img src="assets/images/michael.jpg" class="people" alt="Picture of Michael Wittman">
+				
+				<h1>Lt. Zwi Greengold</h1>
+				<p><span style="color: red; font-family: Basalt, sans-serif;">Top tank commander in modern history.</span> During the Battle of Golan Heights in 1973, “Zwicka” Greengold
+				of the 188th “Barak” (Lightning) Brigade organized a small scratch force that prevented two large Syrian armored formations from 
+				breaking through Israeli lines. Commanding from a series of a half dozen Centurion tanks as each was knocked out, Greengold fought
+				for 20 hours, destroying between 20 and 40 Syrian vehicles before dropping to the ground, wounded, burned, and exhausted, with the words,
+				“I can’t anymore.” He was awarded the Itur HaGvura, Israel’s highest medal of valor.</p>
+				
+				<h1>Marshal Georgy Zhukov</h1>
+				<p><span style="color: red; font-family: Basalt, sans-serif;">World War II’s top tank strategist.</span> Zhukov made his mark using tanks to flank and annihilate
+				the Japanese 23rd Division at Khalkin Gol in August 1939, as Japan attempted to expand its control from occupied Manchuria into
+				Soviet Mongolia. He went on to integrate armor into the Red Army and win the war’s greatest land campaigns, including Moscow (1941),
+				Stalingrad (1942), Kursk (1943), lifting the siege of Leningrad (1944), Operation Bagration (1944), and taking Berlin (1945).</p>
+				<img src="assets/images/georgy.jpg" class="people" alt="Picture of Georgy Zhukov">
+				
+				<h1>Sgt. Kurt Knispel</h1>
+				<p><span style="color: red; font-family: Basalt, sans-serif;">Top tank ace in history.</span> Advancing from loader to gunner to commander in Panzer IVs, Tigers
+				and Tiger IIs on the Russian front and in Normandy, Hungary, and Moravia, Knispel was officially credited with 168 Allied tanks 
+				destroyed—including a T-34 hit at almost two miles away—more tanks than any other tanker ever. He was killed in action on April 28,
+				1945, at age 23, just days before Germany surrendered.</p>
+				<img src="assets/images/kurt.jpg" class="people" alt="Picture of Kurt Knispel">
+				
+				<h1>Gen. Heinz Guderian</h1>
+				<p><span style="color: red; font-family: Basalt, sans-serif;">Father of armored blitzkrieg.</span> Putting Monash’s combined-arms mechanized tactics and postwar
+				theory into high-speed practice, Guderian synthesized the blitzkrieg strategy that helped Germany overrun Poland in 1939. At the
+				Meuse River in 1940 he ignored orders to halt and thrust deep into France. Ironically, following victories in Russia, he lost
+				his field command after prudently retreating before the Soviet counterattack outside Moscow in 1941.</p>
+				<img src="assets/images/heinz.jpg" class="people" alt="Picture of Heinz Guderian">
+				
+				<h1>Lt. Col. Creighton Abrams</h1>
+				<p><span style="color: red; font-family: Basalt, sans-serif;">Top U.S. tank commander in the war.</span> I’m supposed to be the best tank commander in the Army,” Patton
+				once said, “but I have one peer—Abe Abrams.” Leading the 37th Tank Battalion from the front, Abrams and the crew of his own M4 Sherman
+				tank, Thunderbolt, are estimated to have destroyed about 50 German armored fighting vehicles.</p>
+				<img src="assets/images/creighton.jfif" class="people" alt="Picture of Creighton Abrams">	
+    </div>
+  </div>
+</div>
+  <script>
+    const body = document.querySelector("body");
+    const navbar = document.querySelector(".navbar");
+    const menuBtn = document.querySelector(".menu-btn");
+    const cancelBtn = document.querySelector(".cancel-btn");
+    menuBtn.onclick = ()=>{
+      navbar.classList.add("show");
+      menuBtn.classList.add("hide");
+      body.classList.add("disabled");
+    }
+    cancelBtn.onclick = ()=>{
+      body.classList.remove("disabled");
+      navbar.classList.remove("show");
+      menuBtn.classList.remove("hide");
+    }
+    window.onscroll = ()=>{
+      this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+    }
+  </script>
+</body>
+</html>
